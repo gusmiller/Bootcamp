@@ -51,6 +51,7 @@ footer {
 
 .product-slideshow {
   display: flex;
+  align-items: center;
 }
 
 .product-slideshow button {
