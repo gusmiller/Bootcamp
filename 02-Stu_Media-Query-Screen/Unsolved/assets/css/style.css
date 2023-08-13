@@ -17,9 +17,10 @@ header {
 .card {
   border-style: solid;
   border-width: 1px;
+  margin: .5em;
   padding: 10px;
   float: left;
-  width: 25%;
+  width: 50%;
 }
 
 .card header {
@@ -35,5 +36,34 @@ header {
 }
 
 /* TODO: Use media query to change the width of the cards so they split into two columns at 992px or smaller*/
+/* Tablets - header changes color */
+@media (min-width: 992px) {
+  header {
+    background: #772014;
+  }
+
+  .card {
+    width: 25%;
+  }
+}
 
 /* TODO: Use media query to change the width of the cards so they are stacked on top of each other at 768px or smaller */
+@media (max-width: 758px) {
+  header {
+    background: #74b73a;
+  }
+
+  /* https://onextrapixel.com/flexbox-centering-guide/#:~:text=
+      There%20are%20three%20CSS%20properties%20you%20can%20use,
+      works%20when%20flex%20items%20wrap%20into%20multiple%20lines%29.
+
+      You can use the align-items property to align items along the cross axis. If you use it together with the 
+      center property, it centers items vertically when flex-direction is row or row-reverse, and horizontally when 
+      flex-direction is column or column-reverse. 
+  */
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
