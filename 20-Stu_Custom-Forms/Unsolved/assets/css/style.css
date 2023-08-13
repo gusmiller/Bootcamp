@@ -62,6 +62,7 @@ article ul {
 
 form {
   max-width: 400px;
+  margin-left: 50px;
 }
 
 form h3 {
@@ -87,9 +88,9 @@ button {
 
 /* What does this CSS rule do? */
 select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none; /* property exclusively to FireFox */
+  -webkit-appearance: none; /* property exclusively to Safari, Chrome, Opera*/
+  appearance: none; /* property to control native appearance of UI controls*/
   background-image: url("../images/arrow.png");
   background-repeat: no-repeat;
   background-position: right;
@@ -104,7 +105,7 @@ select {
 .text-input, select {
   padding: 1%;
   outline: none;
-  border: 1.2px solid #b9C6ae;
+  border: 1.2px solid #c6aeae;
 }
 
 .text-input:hover, .checkbox:hover, 
@@ -113,6 +114,8 @@ select:hover, button:hover {
 }
 
 /* What does this pseudo-class mean? */
+/* Selects the <input> element that has focus. is allowed on elements 
+   that accept keyboard events or other user inputs. */
 .text-input:focus {
   border-right-width: 5px;
 }
@@ -136,16 +139,18 @@ select:hover, button:hover {
   margin-right: 2%;
 }
 
-/* What does this selector do? */
+/* What does this selector do? This event takes place when user has clicked on the 
+   checkbox - it applies to the label.*/
 .checkbox:checked + label {
   color: #999999;
   font-style: italic;
 }
 
-/* What does this selector do? */
+/* What does this selector do? This too applies to the checked box and the 
+   additional label displayed*/
 .checkbox:checked + label::after {
   margin-left: 10px;
-  font-size: 90%;
+  font-size: 50%;
   content: "(thanks!)";
 }
 
