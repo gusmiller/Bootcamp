@@ -70,11 +70,34 @@ article .smart {
 /* TODO: Style the term/phrase - underline, black text, grab cursor */
 article .tooltips {
   cursor: pointer;
-  color: red;
+  color: blue;
   text-decoration: underline;
 }
 
 /* TODO: Position tooltip above the term/phrase, same color as header and nav links, no border-radius, smaller font size */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #13293d;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 
 aside {
   width: 25%;
@@ -122,6 +145,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+
   header,
   main {
     flex-direction: column;

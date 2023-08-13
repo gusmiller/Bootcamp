@@ -6,11 +6,11 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when certain terms and phrases are underlined and change the cursor to a hand icon when the user hovers over them.
+* ~~It's done when certain terms and phrases are underlined and change the cursor to a hand icon when the user hovers over them.~~
 
-* It's done when the user hovers over the term or phrase and a rectangular tooltip appears next to it.
+* ~~It's done when the user hovers over the term or phrase and a rectangular tooltip appears next to it.~~
 
-* It's done when the tooltip has the same background color and text color as the header and navbar items.
+* ~~It's done when the tooltip has the same background color and text color as the header and navbar items.~~
 
 ## 📝 Notes
 
