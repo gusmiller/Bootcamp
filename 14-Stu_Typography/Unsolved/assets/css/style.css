@@ -73,7 +73,10 @@ article p {
 
 /* TODO: Add a margin to indent the list, give it square bullet points, and assign font family to monospace */
 article ul {
-  margin: 3%;
+  margin: 5%;
+  list-style-type: square;
+  font-family: monospace;
+  line-height: 1.5em;
 }
 
 aside {

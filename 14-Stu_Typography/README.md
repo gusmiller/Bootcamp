@@ -6,13 +6,13 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when the body font has the standard size of 16px.
+* ~~It's done when the body font has the standard size of 16px.~~
 
-* It's done when paragraphs have a line height of 1.5 times the font height.
+* ~~It's done when paragraphs have a line height of 1.5 times the font height.~~
 
-* It's done when headings are 150–200% of the font size and have a font family of `serif`.
+* ~~It's done when headings are 150–200% of the font size and have a font family of `serif`.~~
 
-* It's done when there is a margin of 2–5% on the heading, paragraph, and list.
+* ~~It's done when there is a margin of 2–5% on the heading, paragraph, and list.~~
 
 * It's done when the list is indented, has square bullet points, and has a font family of `monospace`.
 
