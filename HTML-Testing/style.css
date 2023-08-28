@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2 dashed red;
+    line-height: 75px;
+    font-size: 30px;
+    background-color: antiquewhite;
+}
+
+.flex-container .title-section {
+    background-color: #f1f1f1;
+    text-align: center;
+    width: 100%;
+    margin: 10px;
+}
+
+.flex-container .data-section {
+    width: 48%;
+    margin: 5px;
+    padding-left: 15px;
+    border: 1 dashed blue;
+}
