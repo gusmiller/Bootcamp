@@ -6,16 +6,20 @@ var todoCountSpan = document.querySelector("#todo-count");
 var todos = [];
 
 // TODO: What is the purpose of this function?
+/**
+ * This function will retrieve count span from the size of the todos array, 
+ * the array is populated in the INIT function from the localStorage
+ */
 function renderTodos() {
   // TODO: Describe the functionality of the following two lines of code.
   todoList.innerHTML = "";
-  todoCountSpan.textContent = todos.length;
+  todoCountSpan.textContent = todos.length; //Retrieve the length of TODO
   
   // TODO: Describe the functionality of the following `for` loop.
   for (var i = 0; i < todos.length; i++) {
     var todo = todos[i];
 
-    var li = document.createElement("li");
+    var li = document.createElement("li"); // Create a new element
     li.textContent = todo;
     li.setAttribute("data-index", i);
 
@@ -27,7 +31,9 @@ function renderTodos() {
   }
 }
 
-// TODO: What is the purpose of the following function?
+/**
+ * What is the purpose of the following function?
+ */
 function init() {
   // TODO: What is the purpose of the following line of code?
   var storedTodos = JSON.parse(localStorage.getItem("todos"));
