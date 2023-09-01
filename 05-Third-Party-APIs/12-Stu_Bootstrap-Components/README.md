@@ -6,7 +6,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when the page has a styled navbar.
+* ~~It's done when the page has a styled navbar.~~
 
 * It's done when the page has a styled and dismissible alert box.
 
