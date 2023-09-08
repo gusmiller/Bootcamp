@@ -6,7 +6,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when every question prompt on the page is correctly answered and displayed in the correct format using Day.js.
+* ~~It's done when every question prompt on the page is correctly answered and displayed in the correct format using Day.js.~~
 
 ## 📝 Notes
 

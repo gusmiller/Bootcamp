@@ -29,8 +29,18 @@ var handleFormSubmit = function (event) {
 
 formEl.on('submit', handleFormSubmit);
 
-// Add Autocomplete widget here
-//
+/**
+ * Autocomplete section
+ */
+$(function () {
+  var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
+  $("#skill-name").autocomplete({
+    source: availableTags
+  });
+});
 
 // Add Datepicker widget here
 //
+$( function() {
+  $( "#datepicker" ).datepicker();
+} );
