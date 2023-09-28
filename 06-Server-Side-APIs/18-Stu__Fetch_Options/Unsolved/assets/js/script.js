@@ -1,4 +1,6 @@
-fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5')
+fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5', {
+  redirect: 'follow', // manual, *follow, error
+})
   .then(function (response) {
     return response.json();
   })

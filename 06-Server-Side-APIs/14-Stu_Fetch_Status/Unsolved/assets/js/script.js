@@ -1,4 +1,4 @@
-var badRequestUrl = 'https://api.github.com/orgs/nodejs/oreps?per_page=5';
+var badRequestUrl = 'https://api.github.com/orgs/nodejs/repos?per_page=5';
 
 var responseText = document.getElementById('response-text');
 
