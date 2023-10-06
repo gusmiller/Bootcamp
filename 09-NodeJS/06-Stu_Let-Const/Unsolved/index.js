@@ -14,11 +14,11 @@ addGreetingMessage('Tammy');
 
 // TODO: Fix the declarations so that the function works properly.
 const calloutCounter = () => {
-  const callout = 'Outside of the loop';
+  let callout = 'Outside of the loop';
   var counter = 5;
 
   while (counter > 0) {
-    var callout = 'Inside the loop';
+    let callout = 'Inside the loop';
     console.log(counter, callout);
     counter--;
   }
@@ -31,9 +31,9 @@ calloutCounter();
 // TODO: Fix the declarations so that the function works properly.
 const countMatrix = (matrix) => {
   for (var i = 0; i < matrix.length; i++) {
-    var line = matrix[i];
+    let line = matrix[i];
     for (var i = 0; i < line.length; i++) {
-      var element = line[i];
+      let element = line[i];
       console.log(element);
     }
   }
