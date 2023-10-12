@@ -9,12 +9,17 @@ readFile('./data/post.json', 'utf-8')
     console.log('Received data from post.json');
     // TODO: parse the json string and assign the resulting object to a variable
 
-    var obj = JSON.parse(json);
-    // TODO: Use the BlogPost class to create a new BlogPost object and use its `render()` method to return an html string.
+    let obj = JSON.parse(json);
+    console.log(obj);
+
     let o = new BlogPost(obj.title, obj.text, obj.author, obj.createdOn)
-    
-    // TODO: Write the html to file
-    o.render()
+
+    let htmlstring = o.render();
+    console.log(htmlstring);
+
+    writeFile('index.html', htmlstring, (err) =>
+      err ? console.error(err) : console.log('Success!')
+    );
 
   });
 
