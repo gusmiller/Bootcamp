@@ -1,0 +1,15 @@
+{
+  "name": "12-stu_setup-jest",
+  "version": "1.0.0",
+  "description": "Work with a partner to resolve the following issue(s):",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "24.9"
+  }
+}
