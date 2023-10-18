@@ -2,12 +2,17 @@ const express = require('express');
 
 const PORT = 3001;
 const reviews = require('./db/reviews');
+const app = express(); // creates an instance of Express.js. Setting up the foundation for building a web application using Express.js.
 
-const app = express();
+// The express.json() function is a built-in middleware function in Express. It parses
+// incoming requests with JSON payloads and is based on body-parser. 
+// https://www.geeksforgeeks.org/express-js-express-json-function/
+app.use(express.json());
 
-// TODO: Implement middleware for the parsing of JSON data
-
-// TODO: Implement middleware for parsing of URL encoded data
+// The express.urlencoded() function is a built-in middleware function in Express. 
+// It parses incoming requests with URL-encoded payloads and is based on a body parser.
+// https://www.geeksforgeeks.org/express-js-express-urlencoded-function/?ref=lbp
+app.use(express.urlencoded({ extended: true })); //"username=Gus&password=dddd"
 
 // GET request for ALL reviews
 app.get('/api/reviews', (req, res) => {
@@ -38,11 +43,9 @@ app.get('/api/reviews/:review_id', (req, res) => {
 
 // POST request to add a review
 app.post('/api/reviews', (req, res) => {
-  // Log that a POST request was received
-  console.info(`${req.method} request received to add a review`);
-
-  // Prepare a response object to send back to the client
-  let response;
+  
+  console.info(`${req.method} request received to add a review`); // Log that a POST request was received
+  let response; // Prepare a response object to send back to the client
 
   // Check if there is anything in the response body
   if (req.body && req.body.product) {
@@ -55,8 +58,7 @@ app.post('/api/reviews', (req, res) => {
     res.status(400).json('Request body must at least contain a product name');
   }
 
-  // Log the response body to the console
-  console.log(req.body);
+  console.log(req.body); // Log the response body to the console
 });
 
 // POST request to upvote a review
