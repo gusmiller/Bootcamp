@@ -1,17 +1,11 @@
-INSERT INTO GITCheatsheet (Source, Area, GitCode, Description) 
-VALUES (N'LINKS',N'BOOKMARK', 
-N'<a href="https://docs.github.com/en/rest/overview/resources-in-the-rest-api#root-endpoint">https://docs.github.com/en/rest/overview/resources-in-the-rest-api#root-endpoint</a>',
-N'Github REST Documentation')
+DECLARE 
+	@Source nvarchar(30) = N'LINKS',
+	@Area nvarchar(30) = N'NODEJS',
+	@GitCode nvarchar(30) = N'https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/',
+	@Description nvarchar(30) = N'Validations are checks performed in the Sequelize level, in pure JavaScript. They can be arbitrarily complex if you provide a custom validator function, or can be one of the built-in validators offered by Sequelize. If a validation fails, no SQL query will be sent to the database at all.'
 
-INSERT INTO GITCheatsheet (Source, Area, GitCode, Description) 
-VALUES (N'LINKS',N'BOOKMARK', 
-N'<a href="https://api.jquery.com/category/ajax/">https://api.jquery.com/category/ajax/</a>',
-N'Ajax')
-
-INSERT INTO GITCheatsheet (Source, Area, GitCode, Description) 
-VALUES (N'LINKS',N'BOOKMARK', 
-N'<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest</a>',
-N'Xmlhttprequest')
+INSERT INTO GITCheatsheet (Source, Area, GitCode, Description, DateCreated) 
+VALUES (@Source, @Area, @GitCode, @Description, GETDATE())
 
 --Template to insert into GIT Cheatsheet
 --INSERT INTO GITCheatsheet (Source, Area, GitCode, Description) 
@@ -26,4 +20,4 @@ SELECT TOP (1000) [Id]
       ,[GitCode]
       ,[DateCreated]
       ,[DateUpdated]
-  FROM [NCM].[dbo].[GITCheatsheet] where Source=N'LINKS' order by DateCreated desc
+  FROM [NCM].[dbo].[GITCheatsheet] where Source=@Source order by DateCreated desc

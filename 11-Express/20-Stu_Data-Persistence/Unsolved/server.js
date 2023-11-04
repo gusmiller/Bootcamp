@@ -47,13 +47,16 @@ app.post('/api/reviews', (req, res) => {
     // Convert the data to a string so we can save it
     const reviewString = JSON.stringify(newReview);
 
+    const data = fs.readFileSync(`./db/reviews.json`);
+    console.log(data);
+
     // Write the string to a file
-    fs.writeFile(`./db/reviews.json`, reviewString, (err) =>
+    fs.appendFile(`./db/reviews.json`,  reviewString, (err) =>
       err
         ? console.error(err)
         : console.log(
-            `Review for ${newReview.product} has been written to JSON file`
-          )
+          `Review for ${newReview.product} has been written to JSON file`
+        )
     );
 
     const response = {
