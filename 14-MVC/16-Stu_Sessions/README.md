@@ -1,17 +1,13 @@
 # 🏗️ Add Sessions to the Login Route
 
 Work with a partner to implement the following user story:
-
 * As a museum director, I want to allow visitors to view the gallery's paintings only after logging in.
-
 * As a museum visitor, I want to be able to visit multiple pages while maintaining my logged-in status.
 
 ## Acceptance Criteria
 
 * It's done when I can view the gallery's paintings only after I am logged in. Otherwise I am directed to log in.
-
 * It's done when I can view the individual painting page only after I am logged in. Otherwise I am directed to log in.
-
 * It's done when I can navigate from the gallery page to a painting's detail page without losing my logged-in status.
 
 ## Assets
