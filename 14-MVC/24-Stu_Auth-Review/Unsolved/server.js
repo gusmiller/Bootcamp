@@ -7,7 +7,8 @@ const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
 
-// TODO: Add a comment describing the functionality of this expression
+// connect-session-sequelize is a SQL session store using Sequelize.js.
+// https://www.npmjs.com/package/connect-session-sequelize
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
@@ -15,18 +16,18 @@ const PORT = process.env.PORT || 3001;
 
 const hbs = exphbs.create({ helpers });
 
-// TODO: Add a comment describing the functionality of this object
+// Creates an session object
 const sess = {
-  secret: 'Super secret secret',
-  cookie: {},
-  resave: false,
-  saveUninitialized: true,
-  store: new SequelizeStore({
-    db: sequelize
-  })
+     secret: 'Super secret secret',
+     cookie: {},
+     resave: false,
+     saveUninitialized: true,
+     store: new SequelizeStore({
+          db: sequelize
+     })
 };
 
-// TODO: Add a comment describing the functionality of this statement
+// Implements session
 app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
@@ -39,5 +40,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+     app.listen(PORT, () => console.log('Now listening'));
 });

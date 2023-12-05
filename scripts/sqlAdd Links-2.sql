@@ -13,6 +13,9 @@ VALUES (@Source, @Area, @GitCode, @Description, GETDATE())
 --N'<a href=""></a>',
 --N'')
 
+--INSERT INTO GITCheatsheet (Source, Area, GitCode, Description) 
+--VALUES (N'LINKS',N'MONGODB',N'','')
+
 SELECT TOP (1000) [Id]
       ,[Source]
       ,[Area]

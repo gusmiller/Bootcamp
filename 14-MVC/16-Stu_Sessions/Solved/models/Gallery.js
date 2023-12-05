@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize'); //Destructuring imported data
 const sequelize = require('../config/connection');
 
 class Gallery extends Model {}
